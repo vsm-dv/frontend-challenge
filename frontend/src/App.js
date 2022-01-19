@@ -29,12 +29,10 @@ function App() {
 
   function showMainGoals() {
     setShowDeleted(false);
-    console.log(showDeleted, ' main');
   }
 
   function showDeletedGoals() {
     setShowDeleted(true);
-    console.log(showDeleted, ' deleted');
   }
 
   async function getCategories() {
@@ -100,22 +98,46 @@ function App() {
   }
 
   async function deleteGoal(id) {
+    const goal = allGoals.find(goal => goal.id === id);
+    if (goal.status !== 'active') return;
+
+    const arrayDate = new Date().toLocaleDateString('pt-br', {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric'
+    })
+      .split('/');
+
+    const body = {
+      status: "deleted",
+      deletedAt: `${arrayDate[2]}-${arrayDate[1]}-${arrayDate[0]}`
+    }
+
     try {
-      const goal = allGoals.find(goal => goal.id === id);
-      if (goal.status !== 'active') return;
+      await fetch(`http://localhost:3001/targets/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
 
-      const arrayDate = new Date().toLocaleDateString('pt-br', {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric'
-      })
-        .split('/');
+      await getAllGoals();
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 
-      const body = {
-        status: "deleted",
-        achievedAt: `${arrayDate[2]}-${arrayDate[1]}-${arrayDate[0]}`
-      }
+  async function restoreGoal(id) {
+    const goal = allGoals.find(goal => goal.id === id);
+    if (goal.status !== 'deleted') return;
 
+    const body = {
+      status: "active",
+      deletedAt: ""
+    }
+
+    try {
       await fetch(`http://localhost:3001/targets/${id}`, {
         method: 'PATCH',
         headers: {
@@ -161,11 +183,14 @@ function App() {
               title={goal.title}
               description={goal.description}
               category={goal.categoryName}
-              date={goal.createdAt}
+              date={goal.deletedAt}
               statusText={'removido'}
               background={'background-deleted'}
-              src1={''}
-              src2={restoreIcon}
+              src1={restoreIcon}
+              src2={""}
+              id={goal.id}
+              function1={restoreGoal}
+              function2={""}
             />
           ))}
         </div>

@@ -29,7 +29,7 @@
       "category": 4,
       "createdAt": "2022-01-01",
       "status": "active",
-      "achievedAt": "2022-01-14"
+      "deletedAt": ""
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "category": 4,
       "createdAt": "2022-01-10",
       "status": "deleted",
-      "achievedAt": "2022-01-18"
+      "deletedAt": "2022-01-18"
     },
     {
       "id": 3,
@@ -46,7 +46,7 @@
       "description": "Começar a praticar algum esporte aquático em 2022",
       "category": 1,
       "createdAt": "2021-12-14",
-      "status": "deleted",
+      "status": "done",
       "achievedAt": "2022-01-18"
     },
     {
@@ -55,8 +55,8 @@
       "description": "Ler pelo menos dez livros em 2022",
       "category": 5,
       "createdAt": "2022-01-02",
-      "status": "done",
-      "achievedAt": "2022-01-18"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 5,
@@ -64,8 +64,7 @@
       "description": "Economizar pelo menos 1200 reais em 2022 para a viagem de virada do ano de 2023",
       "category": 5,
       "createdAt": "2022-01-02",
-      "status": "done",
-      "achievedAt": "2022-01-18"
+      "status": "active"
     },
     {
       "id": 6,
@@ -73,7 +72,7 @@
       "description": "Conhecer pelo menos 3 cidades",
       "category": 5,
       "createdAt": "2021-07-01",
-      "achievedAt": "2022-01-14",
+      "achievedAt": "2021-12-14",
       "status": "done"
     }
   ]
