@@ -158,42 +158,7 @@ function App() {
 
       <div className="main">
         <Header />
-        <div className="goals-panel">
-          <button>Novo objetivo</button>
-          {!showDeleted && mainGoals.map(goal => (
-            <GoalCard
-              key={goal.id}
-              title={goal.title}
-              description={goal.description}
-              category={goal.categoryName}
-              statusText={goal.status === 'done' ? 'finalizado' : 'criado'}
-              date={goal.status === 'done' ? goal.achievedAt : goal.createdAt}
-              background={goal.status === 'done' && 'background-finished'}
-              src1={checkIcon}
-              src2={deleteIcon}
-              id={goal.id}
-              function1={finishGoal}
-              function2={deleteGoal}
-            />
-          ))}
-
-          {showDeleted && deletedGoals.map(goal => (
-            <GoalCard
-              key={goal.id}
-              title={goal.title}
-              description={goal.description}
-              category={goal.categoryName}
-              date={goal.deletedAt}
-              statusText={'removido'}
-              background={'background-deleted'}
-              src1={restoreIcon}
-              src2={""}
-              id={goal.id}
-              function1={restoreGoal}
-              function2={""}
-            />
-          ))}
-        </div>
+        <GoalCard showDeleted={showDeleted} mainGoals={mainGoals} deletedGoals={deletedGoals} src1={checkIcon} src2={deleteIcon} src3={restoreIcon} function1={finishGoal} function2={deleteGoal} function3={restoreGoal} />
       </div>
     </div>
   );

@@ -37,8 +37,9 @@
       "description": "Aprender a tocar evidências no violão",
       "category": 4,
       "createdAt": "2022-01-10",
-      "status": "deleted",
-      "deletedAt": "2022-01-18"
+      "status": "done",
+      "deletedAt": "",
+      "achievedAt": "2022-01-19"
     },
     {
       "id": 3,
@@ -64,7 +65,8 @@
       "description": "Economizar pelo menos 1200 reais em 2022 para a viagem de virada do ano de 2023",
       "category": 5,
       "createdAt": "2022-01-02",
-      "status": "active"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 6,

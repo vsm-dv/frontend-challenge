@@ -9,7 +9,7 @@
   width: calc(100vw - 20rem);
 }
 
-.goals-panel {
+/* .goals-panel {
   display: flex;
   flex-direction: column;
   padding-left: 8.5rem;
@@ -30,4 +30,4 @@
   margin-bottom: 40px;
   width: 22rem;
   cursor: pointer;
-}
+} */
