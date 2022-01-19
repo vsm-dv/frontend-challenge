@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 1.8rem 1.1rem 2rem;
+    background-color: #FFF;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+header span {
+    color: #F55673;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.search-icon {
+    position: absolute;
+    top: 2.9rem;
+    left: 43.33rem;
+}
+
+header input {
+    all: unset;
+    box-sizing: border-box;
+    width: 45.6rem;
+    height: 5.3rem;
+    border-radius: 10px;
+    padding-left: 2.3rem;
+    background-color: #F2F2F2;
+    color: #7E8086;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}

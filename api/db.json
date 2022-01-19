@@ -1,0 +1,80 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Saúde"
+    },
+    {
+      "id": 2,
+      "name": "Financeiro"
+    },
+    {
+      "id": 3,
+      "name": "Profissional"
+    },
+    {
+      "id": 4,
+      "name": "Aprendizado"
+    },
+    {
+      "id": 5,
+      "name": "Lazer"
+    }
+  ],
+  "targets": [
+    {
+      "id": 1,
+      "title": "Concluir um curso",
+      "description": "Concluir pelo menos 1 curso em 2022 sobre UX",
+      "category": 4,
+      "createdAt": "2022-01-01",
+      "status": "active",
+      "achievedAt": "2022-01-14"
+    },
+    {
+      "id": 2,
+      "title": "Aprender a tocar violão",
+      "description": "Aprender a tocar evidências no violão",
+      "category": 4,
+      "createdAt": "2022-01-10",
+      "status": "deleted",
+      "achievedAt": "2022-01-18"
+    },
+    {
+      "id": 3,
+      "title": "Praticar esporte",
+      "description": "Começar a praticar algum esporte aquático em 2022",
+      "category": 1,
+      "createdAt": "2021-12-14",
+      "status": "deleted",
+      "achievedAt": "2022-01-18"
+    },
+    {
+      "id": 4,
+      "title": "Ler dez livros",
+      "description": "Ler pelo menos dez livros em 2022",
+      "category": 5,
+      "createdAt": "2022-01-02",
+      "status": "done",
+      "achievedAt": "2022-01-18"
+    },
+    {
+      "id": 5,
+      "title": "Guardar 100 reais por mês",
+      "description": "Economizar pelo menos 1200 reais em 2022 para a viagem de virada do ano de 2023",
+      "category": 5,
+      "createdAt": "2022-01-02",
+      "status": "done",
+      "achievedAt": "2022-01-18"
+    },
+    {
+      "id": 6,
+      "title": "Conhecer a Itália",
+      "description": "Conhecer pelo menos 3 cidades",
+      "category": 5,
+      "createdAt": "2021-07-01",
+      "achievedAt": "2022-01-14",
+      "status": "done"
+    }
+  ]
+}
