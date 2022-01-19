@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import SideMenu from './components/SideMenu';
 import Header from './components/Header';
 import GoalsPanel from './components/GoalsPanel';
+import Backdrop from './components/Backdrop';
 
 function App() {
   const [allGoals, setAllGoals] = useState([]);
@@ -10,6 +11,7 @@ function App() {
   const [deletedGoals, setDeletedGoals] = useState([]);
   const [showDeleted, setShowDeleted] = useState(false);
   const [categories, setCategories] = useState([]);
+  const [backdropVisible, setBackdropVisible] = useState('hidden');
 
   useEffect(() => {
     getAllGoals();
@@ -23,6 +25,14 @@ function App() {
       }
     });
   });
+
+  function showBackdrop() {
+    setBackdropVisible('');
+  }
+
+  function closeBackdrop() {
+    setBackdropVisible('hidden');
+  }
 
   function showMainGoals() {
     setShowDeleted(false);
@@ -71,8 +81,7 @@ function App() {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric'
-    })
-      .split('/');
+    }).split('/');
 
     const body = {
       status: "done",
@@ -102,8 +111,7 @@ function App() {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric'
-    })
-      .split('/');
+    }).split('/');
 
     const body = {
       status: "deleted",
@@ -157,13 +165,21 @@ function App() {
 
       <div className="main">
         <Header />
-        <GoalsPanel showDeleted={showDeleted}
+        <GoalsPanel
+          showBackdrop={showBackdrop}
+          showDeleted={showDeleted}
           mainGoals={mainGoals}
           deletedGoals={deletedGoals}
           finishGoal={finishGoal}
           deleteGoal={deleteGoal}
           restoreGoal={restoreGoal} />
       </div>
+      <Backdrop
+        backdropVisible={backdropVisible}
+        closeBackdrop={closeBackdrop}
+        getAllGoals={getAllGoals}
+        categories={categories}
+      />
     </div>
   );
 }

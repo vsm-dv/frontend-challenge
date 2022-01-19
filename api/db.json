@@ -76,6 +76,54 @@
       "createdAt": "2021-07-01",
       "achievedAt": "2021-12-14",
       "status": "done"
+    },
+    {
+      "title": "Estudar Alemão",
+      "description": "Matricular no curso de Alemão",
+      "category": 4,
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 7
+    },
+    {
+      "title": "Estudar Francês",
+      "description": "Matricular no curso de francês",
+      "category": 4,
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 8
+    },
+    {
+      "title": "Estudar Francês 2",
+      "description": "Estudar Francês 2",
+      "category": 4,
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 9
+    },
+    {
+      "title": "encontrar um emprego",
+      "description": "enviar currículos para encontrar um emprego",
+      "category": "trabalho",
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 10
+    },
+    {
+      "title": "Encontrar emprego",
+      "description": "enviar currículos para encontrar um emprego",
+      "category": "emprego",
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 11
+    },
+    {
+      "title": "encontrar emprego 3",
+      "description": "enviar currículos para encontrar um emprego 3",
+      "category": "emprego",
+      "createdAt": "2022-01-19",
+      "status": "active",
+      "id": 12
     }
   ]
 }

@@ -1,0 +1,66 @@
+.backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    z-index: 2;
+}
+  
+.backdrop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 6.2rem 6.0rem 5.2rem;
+    width: 40%;
+}
+
+.title-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+}
+
+.title-button h1 {
+    font-size: 2.4rem;
+}
+
+.title-button img {
+    cursor: pointer;
+}
+
+.input-container, form {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-container input {
+    height: 30px;
+}
+
+.form-button {
+    all: unset;
+    box-sizing: border-box;
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    background-color: #F55673;
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,16 +1,16 @@
-import './styles.css'
+import './styles.css';
 import checkIcon from '../../assets/check-icon.svg';
 import deleteIcon from '../../assets/delete-icon.svg';
 import restoreIcon from '../../assets/restore-icon.svg';
 
-function GoalsPanel({ showDeleted, mainGoals, deletedGoals, finishGoal, deleteGoal, restoreGoal }) {
+function GoalsPanel({ showBackdrop, showDeleted, mainGoals, deletedGoals, finishGoal, deleteGoal, restoreGoal }) {
   return (
     <div className="goals-panel">
-      <button>Novo objetivo</button>
+      <button onClick={() => showBackdrop()}>Novo objetivo</button>
 
       {!showDeleted && mainGoals.map(goal => (
-        <div className={`goal ${goal.status === 'done' && 'background-finished'}`}>
-          <div className="goal-card" key={goal.id}>
+        <div key={goal.id} className={`goal ${goal.status === 'done' && 'background-finished'}`}>
+          <div className="goal-card">
             <div className="goal-info">
               <h1>{goal.title}</h1>
               <p>{goal.description}</p>
