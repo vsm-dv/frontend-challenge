@@ -15,6 +15,7 @@ function Backdrop({ backdropVisible, closeBackdrop, getAllGoals, categories }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (!formInputs.title || !formInputs.description || !formInputs.category) return;
 
     const arrayDate = new Date().toLocaleDateString('pt-br', {
       year: 'numeric',

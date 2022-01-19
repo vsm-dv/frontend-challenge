@@ -47,6 +47,7 @@
 
 .input-container input {
     height: 30px;
+    padding-left: 6px;
 }
 
 .form-button {
