@@ -28,7 +28,8 @@
       "description": "Concluir pelo menos 1 curso em 2022 sobre UX",
       "category": 4,
       "createdAt": "2022-01-01",
-      "status": "active"
+      "status": "done",
+      "achievedAt": "2022-01-19"
     },
     {
       "id": 2,

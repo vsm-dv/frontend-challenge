@@ -48,6 +48,11 @@ function Backdrop({ backdropVisible, closeBackdrop, getAllGoals, categories }) {
       });
 
       await getAllGoals();
+      setFormInputs({
+        title: '',
+        description: '',
+        category: ''
+      });
       closeBackdrop();
     } catch (error) {
       console.log(error.message)
