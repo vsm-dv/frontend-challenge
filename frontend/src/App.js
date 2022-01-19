@@ -2,10 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import SideMenu from './components/SideMenu';
 import Header from './components/Header';
-import GoalCard from './components/GoalCard';
-import checkIcon from './assets/check-icon.svg';
-import deleteIcon from './assets/delete-icon.svg';
-import restoreIcon from './assets/restore-icon.svg';
+import GoalsPanel from './components/GoalsPanel';
 
 function App() {
   const [allGoals, setAllGoals] = useState([]);
@@ -154,11 +151,18 @@ function App() {
 
   return (
     <div className='App'>
-      <SideMenu showMainGoals={showMainGoals} showDeletedGoals={showDeletedGoals} />
+      <SideMenu showDeleted={showDeleted}
+        showMainGoals={showMainGoals}
+        showDeletedGoals={showDeletedGoals} />
 
       <div className="main">
         <Header />
-        <GoalCard showDeleted={showDeleted} mainGoals={mainGoals} deletedGoals={deletedGoals} src1={checkIcon} src2={deleteIcon} src3={restoreIcon} function1={finishGoal} function2={deleteGoal} function3={restoreGoal} />
+        <GoalsPanel showDeleted={showDeleted}
+          mainGoals={mainGoals}
+          deletedGoals={deletedGoals}
+          finishGoal={finishGoal}
+          deleteGoal={deleteGoal}
+          restoreGoal={restoreGoal} />
       </div>
     </div>
   );

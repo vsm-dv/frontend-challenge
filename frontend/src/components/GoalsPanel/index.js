@@ -1,6 +1,9 @@
 import './styles.css'
+import checkIcon from '../../assets/check-icon.svg';
+import deleteIcon from '../../assets/delete-icon.svg';
+import restoreIcon from '../../assets/restore-icon.svg';
 
-function GoalCard({ showDeleted, mainGoals, deletedGoals, src1, src2, src3, function1, function2, function3 }) {
+function GoalsPanel({ showDeleted, mainGoals, deletedGoals, finishGoal, deleteGoal, restoreGoal }) {
   return (
     <div className="goals-panel">
       <button>Novo objetivo</button>
@@ -16,8 +19,8 @@ function GoalCard({ showDeleted, mainGoals, deletedGoals, src1, src2, src3, func
 
             <div className="goal-actions">
               <div className="goal-buttons">
-                <img src={src1} alt="" onClick={() => function1(goal.id)} />
-                <img src={src2} alt="" onClick={() => function2(goal.id)} />
+                <img src={checkIcon} alt="" onClick={() => finishGoal(goal.id)} />
+                <img src={deleteIcon} alt="" onClick={() => deleteGoal(goal.id)} />
               </div>
               <span className='added-in'>
                 {goal.status === 'done' ? 'finalizado' : 'criado'} em:
@@ -26,6 +29,7 @@ function GoalCard({ showDeleted, mainGoals, deletedGoals, src1, src2, src3, func
           </div>
         </div>
       ))}
+
       {showDeleted && deletedGoals.map(goal => (
         <div className={`goal ${goal.status === 'deleted' && 'background-deleted'}`}>
           <div className="goal-card" key={goal.id}>
@@ -37,7 +41,7 @@ function GoalCard({ showDeleted, mainGoals, deletedGoals, src1, src2, src3, func
 
             <div className="goal-actions">
               <div className="goal-buttons">
-                <img src={src3} alt="" onClick={() => function3(goal.id)} />
+                <img src={restoreIcon} alt="" onClick={() => restoreGoal(goal.id)} />
               </div>
               <span className='added-in'>removido em: {goal.deletedAt}</span>
             </div>
@@ -49,4 +53,4 @@ function GoalCard({ showDeleted, mainGoals, deletedGoals, src1, src2, src3, func
   )
 }
 
-export default GoalCard;
+export default GoalsPanel;
