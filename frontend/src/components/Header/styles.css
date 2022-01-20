@@ -4,7 +4,6 @@ header {
     align-items: center;
     padding: 1.1rem 1.8rem 1.1rem 2rem;
     background-color: #FFF;
-    margin-bottom: 25px;
     position: relative;
 }
 
@@ -31,4 +30,8 @@ header input {
     color: #7E8086;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    background-image: url('../../assets/search-icon.svg');
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y: center;
 }
