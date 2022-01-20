@@ -28,8 +28,8 @@
       "description": "Concluir pelo menos 1 curso em 2022 sobre UX",
       "category": 4,
       "createdAt": "2022-01-01",
-      "status": "done",
-      "achievedAt": "2022-01-19"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 2,
@@ -37,7 +37,8 @@
       "description": "Aprender a tocar evidências no violão",
       "category": 4,
       "createdAt": "2022-01-10",
-      "status": "active"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 3,
@@ -45,7 +46,8 @@
       "description": "Começar a praticar algum esporte aquático em 2022",
       "category": 1,
       "createdAt": "2021-12-14",
-      "status": "active"
+      "status": "deleted",
+      "deletedAt": "2022-01-20"
     },
     {
       "id": 4,
@@ -54,7 +56,7 @@
       "category": 5,
       "createdAt": "2022-01-02",
       "status": "deleted",
-      "deletedAt": "2022-01-19"
+      "deletedAt": "2022-01-20"
     },
     {
       "id": 5,
@@ -74,14 +76,23 @@
       "status": "done"
     },
     {
-      "title": "Estudar Alemão",
-      "description": "Matricular no curso de Alemão",
-      "category": 4,
-      "createdAt": "2022-01-19",
-      "status": "done",
+      "title": "conhecer o Canadá",
+      "description": "viajar para o canadá em 25/04/2023",
+      "category": 5,
+      "createdAt": "2022-01-20",
+      "status": "deleted",
       "id": 7,
+      "deletedAt": "2022-01-20"
+    },
+    {
+      "title": "investir na bolsa ou títulos",
+      "description": "abrir uma conta de investimentos para comprar títulos e ações",
+      "category": 2,
+      "createdAt": "2022-01-20",
+      "status": "done",
+      "id": 8,
       "deletedAt": "",
-      "achievedAt": "2022-01-19"
+      "achievedAt": "2022-01-20"
     }
   ]
 }

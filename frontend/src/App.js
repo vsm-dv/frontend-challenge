@@ -12,11 +12,20 @@ function App() {
   const [showDeleted, setShowDeleted] = useState(false);
   const [categories, setCategories] = useState([]);
   const [backdropVisible, setBackdropVisible] = useState('hidden');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredGoals, setFilteredGoals] = useState([]);
 
   useEffect(() => {
     getAllGoals();
     getCategories();
   }, []);
+
+  useEffect(() => {
+    if (!searchTerm) {
+      return;
+    }
+    setFilteredGoals(allGoals.filter(goal => goal.title.toLowerCase().includes(searchTerm.toLowerCase())));
+  }, [searchTerm])
 
   categories.forEach(category => {
     allGoals.forEach(goal => {
@@ -28,6 +37,7 @@ function App() {
 
   function showBackdrop() {
     setBackdropVisible('');
+    setSearchTerm('');
   }
 
   function closeBackdrop() {
@@ -36,10 +46,12 @@ function App() {
 
   function showMainGoals() {
     setShowDeleted(false);
+    setSearchTerm('');
   }
 
   function showDeletedGoals() {
     setShowDeleted(true);
+    setSearchTerm('');
   }
 
   async function getCategories() {
@@ -97,6 +109,7 @@ function App() {
         body: JSON.stringify(body)
       });
 
+      setSearchTerm('');
       await getAllGoals();
     } catch (error) {
       console.log(error.message);
@@ -127,6 +140,7 @@ function App() {
         body: JSON.stringify(body)
       });
 
+      setSearchTerm('');
       await getAllGoals();
     } catch (error) {
       console.log(error.message);
@@ -151,6 +165,7 @@ function App() {
         body: JSON.stringify(body)
       });
 
+      setSearchTerm('');
       await getAllGoals();
     } catch (error) {
       console.log(error.message);
@@ -164,7 +179,8 @@ function App() {
         showDeletedGoals={showDeletedGoals} />
 
       <div className="main">
-        <Header />
+        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
         <GoalsPanel
           showBackdrop={showBackdrop}
           showDeleted={showDeleted}
@@ -172,7 +188,10 @@ function App() {
           deletedGoals={deletedGoals}
           finishGoal={finishGoal}
           deleteGoal={deleteGoal}
-          restoreGoal={restoreGoal} />
+          restoreGoal={restoreGoal}
+          searchTerm={searchTerm}
+          filteredGoals={filteredGoals}
+        />
       </div>
       <Backdrop
         backdropVisible={backdropVisible}
