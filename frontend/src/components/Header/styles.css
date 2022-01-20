@@ -4,19 +4,12 @@ header {
     align-items: center;
     padding: 1.1rem 1.8rem 1.1rem 2rem;
     background-color: #FFF;
-    position: relative;
 }
 
 header span {
     color: #F55673;
     font-size: 2rem;
     font-weight: 700;
-}
-
-.search-icon {
-    position: absolute;
-    top: 2.9rem;
-    left: 43.33rem;
 }
 
 header input {
