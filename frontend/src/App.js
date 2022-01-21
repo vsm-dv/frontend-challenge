@@ -173,13 +173,18 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <>
       <SideMenu showDeleted={showDeleted}
         showMainGoals={showMainGoals}
         showDeletedGoals={showDeletedGoals} />
 
       <div className="main">
-        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <Header
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          showMainGoals={showMainGoals}
+          showDeletedGoals={showDeletedGoals}
+        />
 
         <GoalsPanel
           showBackdrop={showBackdrop}
@@ -199,7 +204,7 @@ function App() {
         getAllGoals={getAllGoals}
         categories={categories}
       />
-    </div>
+    </>
   );
 }
 

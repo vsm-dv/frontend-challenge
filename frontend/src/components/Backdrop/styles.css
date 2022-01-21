@@ -22,10 +22,10 @@
 }
 
 .title-button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .title-button h1 {
@@ -63,4 +63,27 @@
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 375px) {
+    .backdrop {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .title-button {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .backdrop-container {
+        width: 90vw;
+        height: 55vh;
+        padding: 30px 30px;
+    }
+
+    .input-container {
+        gap: 2px;
+        margin-bottom: 20px;
+    }
 }

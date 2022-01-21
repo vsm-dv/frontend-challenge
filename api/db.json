@@ -37,8 +37,8 @@
       "description": "Aprender a tocar evidências no violão",
       "category": 4,
       "createdAt": "2022-01-10",
-      "status": "active",
-      "deletedAt": ""
+      "status": "deleted",
+      "deletedAt": "2022-01-21"
     },
     {
       "id": 3,
@@ -46,8 +46,8 @@
       "description": "Começar a praticar algum esporte aquático em 2022",
       "category": 1,
       "createdAt": "2021-12-14",
-      "status": "deleted",
-      "deletedAt": "2022-01-20"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 4,
@@ -64,7 +64,8 @@
       "description": "Economizar pelo menos 1200 reais em 2022 para a viagem de virada do ano de 2023",
       "category": 5,
       "createdAt": "2022-01-02",
-      "status": "active"
+      "status": "done",
+      "achievedAt": "2022-01-20"
     },
     {
       "id": 6,
@@ -80,9 +81,9 @@
       "description": "viajar para o canadá em 25/04/2023",
       "category": 5,
       "createdAt": "2022-01-20",
-      "status": "deleted",
+      "status": "active",
       "id": 7,
-      "deletedAt": "2022-01-20"
+      "deletedAt": ""
     },
     {
       "title": "investir na bolsa ou títulos",
@@ -93,6 +94,23 @@
       "id": 8,
       "deletedAt": "",
       "achievedAt": "2022-01-20"
+    },
+    {
+      "title": "Estudar Alemão",
+      "description": "Matricular no curso de Alemão",
+      "category": 4,
+      "createdAt": "2022-01-20",
+      "status": "active",
+      "id": 9
+    },
+    {
+      "title": "Estudar Francês",
+      "description": "Matricular no curso de francês",
+      "category": 4,
+      "createdAt": "2022-01-21",
+      "status": "deleted",
+      "id": 10,
+      "deletedAt": "2022-01-21"
     }
   ]
 }
