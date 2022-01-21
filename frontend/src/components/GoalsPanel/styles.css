@@ -38,7 +38,7 @@
     border-radius: 5px;
     padding: 4px 18px 7px 20px;
     min-height: 111px;
-    min-width: 365px;
+    flex-wrap: wrap;
     margin-bottom: 15px;
 }
 
@@ -57,7 +57,7 @@
 
 .goal-info p {
     font-size: 1.1rem;
-    max-width: 480px;
+    max-width: 40rem;
     height: 30px;
     margin-bottom: 14px;
     color: #000000;

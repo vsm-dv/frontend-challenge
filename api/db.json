@@ -37,8 +37,8 @@
       "description": "Aprender a tocar evidências no violão",
       "category": 4,
       "createdAt": "2022-01-10",
-      "status": "deleted",
-      "deletedAt": "2022-01-21"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 3,
@@ -55,8 +55,8 @@
       "description": "Ler pelo menos dez livros em 2022",
       "category": 5,
       "createdAt": "2022-01-02",
-      "status": "deleted",
-      "deletedAt": "2022-01-20"
+      "status": "active",
+      "deletedAt": ""
     },
     {
       "id": 5,
@@ -81,9 +81,9 @@
       "description": "viajar para o canadá em 25/04/2023",
       "category": 5,
       "createdAt": "2022-01-20",
-      "status": "active",
+      "status": "deleted",
       "id": 7,
-      "deletedAt": ""
+      "deletedAt": "2022-01-21"
     },
     {
       "title": "investir na bolsa ou títulos",

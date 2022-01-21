@@ -28,6 +28,7 @@ header input {
     background-repeat: no-repeat;
     background-position-x: 96%;
     background-position-y: center;
+    margin-right: 20px;
 }
 
 .top-menu, .menu-options {

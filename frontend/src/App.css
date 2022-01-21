@@ -1,6 +1,5 @@
 .main {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  position: relative;
+  min-width: 85%;
 }
