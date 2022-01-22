@@ -11,6 +11,7 @@ header span {
     color: #F55673;
     font-size: 2rem;
     font-weight: 700;
+    margin-left: 20px;
 }
 
 header input {
@@ -28,7 +29,6 @@ header input {
     background-repeat: no-repeat;
     background-position-x: 96%;
     background-position-y: center;
-    margin-right: 20px;
 }
 
 .top-menu, .menu-options {
@@ -58,9 +58,9 @@ header input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    position: fixed;
     background-color: #D9D9D9;
-    width: 100vw;
+    min-width: 100%;
     height: 25vh;
     padding-top: 2px;
     padding-right: 7px;

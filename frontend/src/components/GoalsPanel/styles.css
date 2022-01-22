@@ -133,6 +133,11 @@
     
     .goal-info p {
         max-width: 273px;
+        font-size: 1rem;
+    }
+
+    .goal-info h1 {
+        font-size: 1.8rem;
     }
 
     .goal-buttons img {
