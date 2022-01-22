@@ -18,7 +18,7 @@
     background-color: #FFF;
     border-radius: 20px;
     padding: 6.2rem 6.0rem 5.2rem;
-    width: 40%;
+    min-width: 40%;
 }
 
 .title-button {
@@ -67,8 +67,9 @@
 
 @media (max-width: 375px) {
     .backdrop {
-        width: 100vw;
-        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow-y: hidden;
     }
 
     .title-button {
@@ -78,7 +79,7 @@
     
     .backdrop-container {
         width: 90vw;
-        height: 55vh;
+        min-height: 55vh;
         padding: 30px 30px;
     }
 
